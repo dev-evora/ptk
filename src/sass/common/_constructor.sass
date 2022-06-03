@@ -1,0 +1,47 @@
+.constructor
+  &-promo
+    color: #fff
+    background: $color-blue
+    padding: 90px 0 45px
+    position: relative
+    overflow: hidden
+    transition: .2s
+    h3
+      margin-top: 15px
+      font-size: 16px
+      font-weight: 400
+      margin-bottom: 30px
+    a
+      text-decoration: underline
+      font-size: 16px
+      @include flexbox
+      align-items: center
+      opacity: 0
+      transition: .2s
+      img
+        margin-left: 20px
+      &::before
+        content: ''
+        position: absolute
+        top: -90px
+        left: -1000px
+        right: -1000px
+        bottom: -90px
+    &:hover
+      background: $color-main
+      a
+        opacity: 1
+    &__content
+      max-width: 860px
+      margin: 0 auto
+      padding-left: 120px
+      position: relative
+      &::before
+        content: ''
+        position: absolute
+        top: 5px
+        left: 0
+        width: 74px
+        height: 74px
+        background: url(../img/svg/constructor.svg) no-repeat
+        background-size: 74px
