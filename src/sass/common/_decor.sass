@@ -1,0 +1,69 @@
+.decor
+  padding: 90px 0
+  &-row
+    @include flexbox
+    align-items: flex-start
+    margin-top: 40px
+  &-left
+    width: 280px
+    .btn-wrap
+      margin-top: 40px
+  &-list
+    @include flexbox
+    flex-direction: column
+    align-items: flex-start
+    li
+      border: 1px solid $color-blue
+      padding: 10px 20px
+      border-radius: 4px
+      margin-top: 20px
+      cursor: pointer
+      transition: .2s
+      font-size: 16px
+      &:first-child
+        margin-top: 0
+      &:hover, &.active
+        border: 1px solid $color-brown
+        color: $color-brown
+  &-right
+    width: calc(100% - 280px - 30px)
+    margin-left: auto
+  &-content
+    display: none
+    &.active
+      display: block
+  &-slider
+    @include flexbox
+    justify-content: space-between
+    &__main, &__thumbs
+      overflow: hidden
+      height: 470px
+      img
+        width: 100%
+        height: 100%
+        object-fit: cover
+        object-position: center
+    &__main
+      width: calc(100% - 30px - 74px)
+      border-radius: 4px
+      overflow: hidden
+    &__thumbs
+      width: 74px
+      .swiper-slide
+        border-radius: 4px
+        overflow: hidden
+        position: relative
+        cursor: pointer
+        &::before
+          content: ''
+          position: absolute
+          top: 0
+          left: 0
+          right: 0
+          bottom: 0
+          border-radius: 4px
+          border: 2px solid #CF6339
+          opacity: 0
+          transition: .2s
+      .swiper-slide-thumb-active::before
+        opacity: 1
