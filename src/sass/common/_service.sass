@@ -78,3 +78,23 @@
     padding-bottom: 90px
     .need-row
       margin-top: -30px
+
+  &-about
+    padding-bottom: 90px
+    .container
+      @include flexbox
+      align-items: flex-start
+      justify-content: space-between
+    &__text
+      width: calc(100% - 410px - 30px)
+      max-width: 700px
+      margin-left: 30px
+      .title-md
+        margin-top: 30px
+        &:first-child
+          margin-top: 0
+      p
+        margin-top: 10px
+
+  &-helper
+    width: 410px
