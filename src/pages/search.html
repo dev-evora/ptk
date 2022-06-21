@@ -1,0 +1,29 @@
+{% extends 'common/_layout.html' %}
+{% set site_title = 'Результаты поиска' %}
+
+{% block content %}
+
+{% include 'common/breadcrumbs.html' %}
+
+<section class="goods">
+  <div class="container">
+    <h2 class="title-lg">Поиск</h2>
+    <h3 class="title-md">Результат поиска Карниз</h3>
+    <div class="goods-row">
+      {% include 'common/goods-item.html' %}
+      {% include 'common/goods-item.html' %}
+      {% include 'common/goods-item.html' %}
+      {% include 'common/goods-item.html' %}
+      {% include 'common/goods-item.html' %}
+      {% include 'common/goods-item.html' %}
+      {% include 'common/goods-item.html' %}
+      {% include 'common/goods-item.html' %}
+      {% include 'common/goods-item.html' %}
+      {% include 'common/goods-item.html' %}
+    </div>
+  </div>
+</section>
+
+{% include 'common/ask.html' %}
+
+{% endblock %}
