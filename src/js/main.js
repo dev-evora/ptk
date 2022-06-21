@@ -78,3 +78,20 @@ if ($('.decor-slider').length) {
     });
   });
 }
+
+const productSlider = new Swiper('.product-slider', {
+  observer: true,
+  observeParents: true,
+  watchSlidesProgress: true,
+  spaceBetween: 30,
+  slidesPerView: 3,
+  slidesPerGroup: 3,
+  navigation: {
+    nextEl: '.control-next',
+    prevEl: '.control-prev',
+  },
+  pagination: {
+    el: '.control-pagination',
+    clickable: true,
+  },
+});
