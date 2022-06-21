@@ -45,3 +45,37 @@
       margin-top: 15px
     .swiper-slide
       min-height: 165px
+  &-section
+    padding-bottom: 90px
+    &__row
+      @include flexbox
+      align-items: flex-start
+      margin: 0 -15px
+      .work-item
+        width: calc(100% / 3 - 30px)
+        margin: 30px 15px 0
+  &-item
+    position: relative
+    &__img
+      width: 100%
+      height: 240px
+      overflow: hidden
+      img
+        width: 100%
+        height: 100%
+        object-fit: cover
+        object-position: center
+        transition: .2s
+    &__title
+      display: block
+      font-size: 16px
+      margin-top: 15px
+      &::before
+        content: ''
+        position: absolute
+        top: 0
+        left: 0
+        right: 0
+        bottom: 0
+    &:hover .work-item__img img
+      transform: scale(1.1)
