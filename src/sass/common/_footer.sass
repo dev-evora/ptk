@@ -1,0 +1,44 @@
+.footer
+  &-top
+    padding: 90px 0
+    &__row
+      @include flexbox
+      align-items: flex-start
+      margin: 0 -15px
+  &-nav
+    width: calc(100% / 4 - 30px)
+    margin: 0 15px
+    .title-md
+      margin-bottom: 30px
+    &__list
+      li
+        margin-top: 20px
+        &:first-child
+          margin-top: 0
+    &__right
+      text-align: right
+      font-size: 16px
+  &-bottom
+    padding: 45px 0
+    border-top: 1px solid $color-main
+    .container
+      @include flexbox
+      align-items: center
+      justify-content: space-between
+  &-link
+    font-size: 12px
+    li
+      margin-top: 10px
+      &:first-child
+        margin-top: 0
+  &-menu
+    width: 100%
+    margin-top: 40px
+    @include flexbox
+    align-items: center
+    justify-content: center
+    font-size: 12px
+    li
+      margin: 0 30px
+      a
+        border-bottom: 1px solid $color-main
