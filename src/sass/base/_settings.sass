@@ -161,3 +161,15 @@ body
       display: block
     .swiper-pagination-bullet-active
       background: $color-brown
+
+.breadcrumbs
+  padding: 30px 0
+  font-size: 12px
+  color: #bdbdbd
+  li
+    display: inline
+    &::after
+      content: '>'
+      padding-left: 4px
+    &:last-child::after
+      display: none
