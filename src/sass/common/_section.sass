@@ -1,0 +1,67 @@
+.section
+  padding-top: 90px
+  &-row
+    @include flexbox
+    align-items: center
+    .title-lg
+      width: calc(100% - 200px)
+    h3
+      font-size: 16px
+      font-weight: 400
+      margin-top: 20px
+      width: 100%
+      max-width: 590px
+    .btn-outline
+      margin-left: auto
+  &-tabs
+    @include flexbox
+    align-items: flex-start
+    margin-right: -30px
+    li
+      width: 180px
+      height: 46px
+      @include flexbox
+      align-items: center
+      justify-content: center
+      background: #f2f2f2
+      font-size: 16px
+      margin-right: 30px
+      cursor: pointer
+      &.active
+        background: $color-main
+        color: #fff
+  &-tab
+    display: none
+    &.active
+      display: block
+  &-text
+    margin: 40px 0
+    font-size: 16px
+    p
+      margin-top: 15px
+    h3
+      margin-top: 40px
+      font-size: 22px
+      font-weight: 400
+    p, h3
+      &:first-child
+        margin-top: 0
+    &__gallery
+      @include flexbox
+      align-items: flex-start
+      margin: 0 -15px
+      a
+        width: calc(100% / 2 - 30px)
+        margin: 40px 15px 0
+      img
+        width: 100%
+  &-sert
+    @include flexbox
+    align-items: flex-start
+    margin: 10px -15px 0
+    a
+      display: block
+      width: calc(100% / 4 - 30px)
+      margin: 30px 15px 0
+      img
+        width: 100%

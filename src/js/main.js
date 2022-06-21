@@ -137,3 +137,13 @@ const uniqSlider = new Swiper('.uniq-slider', {
     clickable: true,
   },
 });
+
+$('.section-tabs li').click(function () {
+  const id = $(this).attr('data-id');
+
+  $('.section-tabs li').removeClass('active');
+  $('.section-tabs li[data-id=' + id + ']').addClass('active');
+
+  $('.section-tab').removeClass('active');
+  $('.section-tab[data-id=' + id + ']').addClass('active');
+});
