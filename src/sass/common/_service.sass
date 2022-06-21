@@ -1,4 +1,12 @@
 .service
+  padding-bottom: 90px
+  &-row
+    @include flexbox
+    align-items: flex-start
+    margin: 0 -15px
+    .service-item
+      width: calc(100% / 3 - 30px)
+      margin: 30px 15px 0
   &-item
     position: relative
     &__img
