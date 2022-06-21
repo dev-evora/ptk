@@ -1,0 +1,74 @@
+{% extends 'common/_layout.html' %}
+{% set site_title = 'Портфолио' %}
+
+{% block content %}
+
+{% include 'common/breadcrumbs.html' %}
+
+<section class="portfolio">
+  <div class="container">
+    <h2 class="title-lg">Дом в Гатчине</h2>
+    <div class="portfolio-card">
+      <img src="img/portfolio.jpg" alt="" class="portfolio-card__img">
+      <div class="portfolio-card__text">
+        <ul>
+          <li>Площадь: 200 м2</li>
+          <li>Материал: пенопласт с мастичным покрытием</li>
+          <li>Сложность: средняя</li>
+        </ul>
+        <p>Изготовление декоративных элементов с последующим монтажом.</p>
+        <p>Элементы декора: пилястры, фасадный карниз, филенка.</p>
+      </div>
+    </div>
+    <div class="portfolio-section">
+      <h3 class="title-md">Подготовка</h3>
+      <p>Приехали на место, провели замеры.</p>
+      <p>Выбрали материал изделия и покрытие.</p>
+    </div>
+    <div class="portfolio-section">
+      <h3 class="title-md">Изготовление</h3>
+      <p>Получили от заказчика чертежи здания, согласовали.</p>
+      <p>Объем работ - 300 деталей разной сложности. Выполнили работу за 5 дней.</p>
+      <div class="portfolio-gallery">
+        <a href="img/portfolio.jpg" data-fancybox><img src="img/portfolio.jpg" alt=""></a>
+      </div>
+    </div>
+    <div class="portfolio-section">
+      <h3 class="title-md">Подготовка и обработка</h3>
+      <p>Обработали внешнюю поверхность мастичным (воднодисперсионным) покрытием.</p>
+      <p>Эти работы выплял технолог. Процесс нанесения и просушки всех деталей занял 3 дня.</p>
+      <div class="portfolio-gallery">
+        <a href="img/portfolio.jpg" data-fancybox><img src="img/portfolio.jpg" alt=""></a>
+        <a href="img/portfolio.jpg" data-fancybox><img src="img/portfolio.jpg" alt=""></a>
+        <a href="img/portfolio.jpg" data-fancybox><img src="img/portfolio.jpg" alt=""></a>
+      </div>
+    </div>
+    <div class="portfolio-section">
+      <h3 class="title-md">Доставка и монтаж</h3>
+      <p>Доставили на место.</p>
+      <p>Эти работы выплял технолог. Процесс нанесения и просушки всех деталей занял 3 дня.</p>
+      <div class="portfolio-gallery">
+        <a href="img/portfolio.jpg" data-fancybox><img src="img/portfolio.jpg" alt=""></a>
+        <a href="img/portfolio.jpg" data-fancybox><img src="img/portfolio.jpg" alt=""></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="more">
+  <div class="container">
+    <h2 class="title-lg">Товары из разделов</h2>
+    <div class="product-row">
+      {% include 'common/product-item.html' %}
+    </div>
+    <h2 class="title-lg">Выполненные услуги</h2>
+    <div class="service-row">
+      {% include 'common/service-item.html' %}
+    </div>
+  </div>
+</section>
+
+{% include 'common/ask.html' %}
+
+{% endblock %}
