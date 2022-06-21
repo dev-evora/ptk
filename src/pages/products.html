@@ -3,6 +3,22 @@
 
 {% block content %}
 
-  {% include 'common/breadcrumbs.html' %}
+{% include 'common/breadcrumbs.html' %}
+
+<section class="product">
+  <div class="container">
+    <h2 class="title-lg">Продукция</h2>
+    <h3 class="title-md">Наши изделия из полимеров, дерева, EVA и других материалов</h3>
+    <div class="product-row">
+      {% include 'common/product-item.html' %}
+      {% include 'common/product-item.html' %}
+      {% include 'common/product-item.html' %}
+      {% include 'common/product-item.html' %}
+      {% include 'common/product-item.html' %}
+      {% include 'common/product-item.html' %}
+      {% include 'common/product-item.html' %}
+    </div>
+  </div>
+</section>
 
 {% endblock %}

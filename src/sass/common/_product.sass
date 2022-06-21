@@ -1,4 +1,6 @@
 .product
+  padding: 45px 0 90px
+  background: #f2f2f2
   &-home
     padding: 45px 0 90px
     background: #f2f2f2
@@ -40,3 +42,9 @@
         bottom: 0
     &:hover .product-item__img img
       transform: scale(1.1)
+  &-row
+    @include flexbox
+    margin: 0 -15px
+    .product-item
+      width: calc(100% / 3 - 30px)
+      margin: 30px 15px 0
