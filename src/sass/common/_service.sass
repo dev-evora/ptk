@@ -1,0 +1,28 @@
+.service
+  &-item
+    position: relative
+    &__img
+      height: 190px
+      overflow: hidden
+      img
+        width: 100%
+        height: 100%
+        object-fit: cover
+        object-position: center
+        transition: .2s
+    &__title
+      display: block
+      margin-top: 20px
+      font-size: 16px
+      &::before
+        content: ''
+        position: absolute
+        top: 0
+        left: 0
+        right: 0
+        bottom: 0
+    p
+      margin-top: 10px
+      color: $color-blue
+    &:hover .service-item__img img
+      transform: scale(1.1)

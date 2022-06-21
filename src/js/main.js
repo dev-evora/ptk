@@ -87,11 +87,11 @@ const productSlider = new Swiper('.product-slider', {
   slidesPerView: 3,
   slidesPerGroup: 3,
   navigation: {
-    nextEl: '.control-next',
-    prevEl: '.control-prev',
+    nextEl: '.product-next',
+    prevEl: '.product-prev',
   },
   pagination: {
-    el: '.control-pagination',
+    el: '.product-pagination',
     clickable: true,
   },
 });
@@ -101,11 +101,11 @@ const workThumbs = new Swiper('.work-second', {
   observeParents: true,
   watchSlidesProgress: true,
   navigation: {
-    nextEl: '.control-next',
-    prevEl: '.control-prev',
+    nextEl: '.work-next',
+    prevEl: '.work-prev',
   },
   pagination: {
-    el: '.control-pagination',
+    el: '.work-pagination',
     clickable: true,
   },
 });
@@ -113,10 +113,27 @@ const workThumbs = new Swiper('.work-second', {
 const workMain = new Swiper('.work-main', {
   watchSlidesProgress: true,
   navigation: {
-    nextEl: '.control-next',
-    prevEl: '.control-prev',
+    nextEl: '.work-next',
+    prevEl: '.work-prev',
   },
   thumbs: {
     swiper: workThumbs,
+  },
+});
+
+const uniqSlider = new Swiper('.uniq-slider', {
+  observer: true,
+  observeParents: true,
+  watchSlidesProgress: true,
+  spaceBetween: 30,
+  slidesPerView: 3,
+  slidesPerGroup: 3,
+  navigation: {
+    nextEl: '.uniq-next',
+    prevEl: '.uniq-prev',
+  },
+  pagination: {
+    el: '.uniq-pagination',
+    clickable: true,
   },
 });

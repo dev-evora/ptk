@@ -163,9 +163,9 @@
         <div class="swiper-slide">{% include 'common/product-item.html' %}</div>
       </div>
       <div class="control">
-        <div class="control-arrow control-prev"></div>
-        <div class="control-pagination"></div>
-        <div class="control-arrow control-next"></div>
+        <div class="control-arrow control-prev product-prev"></div>
+        <div class="control-pagination product-pagination"></div>
+        <div class="control-arrow control-next product-next"></div>
       </div>
     </div>
   </div>
@@ -202,9 +202,9 @@
             </div>
           </div>
           <div class="control">
-            <div class="control-arrow control-prev"></div>
-            <div class="control-pagination"></div>
-            <div class="control-arrow control-next"></div>
+            <div class="control-arrow control-prev work-prev"></div>
+            <div class="control-pagination work-pagination"></div>
+            <div class="control-arrow control-next work-next"></div>
           </div>
         </div>
         <div class="btn-wrap"><a href="#" class="btn-brown">Перейти к портфолио</a></div>
@@ -214,5 +214,30 @@
 </section>
 
 {% include 'common/sert.html' %}
+
+<section class="uniq">
+  <div class="container">
+    <h2 class="title-lg">Хотите создать уникальную вещь?</h2>
+    <div class="uniq-row">
+      <h3>Выбор очевиден. <span>ПТК</span> Пенопласт</h3>
+      <a href="#" class="btn-outline">Перейти к услугам</a>
+      <h4>Создадим по вашему эскизу или чертежу</h4>
+    </div>
+    <div class="uniq-slider">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">{% include 'common/service-item.html' %}</div>
+        <div class="swiper-slide">{% include 'common/service-item.html' %}</div>
+        <div class="swiper-slide">{% include 'common/service-item.html' %}</div>
+        <div class="swiper-slide">{% include 'common/service-item.html' %}</div>
+        <div class="swiper-slide">{% include 'common/service-item.html' %}</div>
+      </div>
+      <div class="control">
+        <div class="control-arrow control-prev uniq-prev"></div>
+        <div class="control-pagination uniq-pagination"></div>
+        <div class="control-arrow control-next uniq-next"></div>
+      </div>
+    </div>
+  </div>
+</section>
 
 {% endblock %}
