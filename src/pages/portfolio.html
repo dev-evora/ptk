@@ -1,0 +1,29 @@
+{% extends 'common/_layout.html' %}
+{% set site_title = 'Портфолио' %}
+
+{% block content %}
+
+{% include 'common/breadcrumbs.html' %}
+
+<section class="portfolio">
+  <div class="container">
+    <h2 class="title-lg">Портфолио</h2>
+    <div class="portfolio-row">
+      <ul class="portfolio-list">
+        <li class="active"><a href="#">Фасадный декор</a></li>
+        <li><a href="#">Рекламная продукция</a></li>
+        <li><a href="#">Утепление пола</a></li>
+      </ul>
+      <div class="portfolio-content">
+        {% include 'common/portfolio-item.html' %}
+        {% include 'common/portfolio-item.html' %}
+        {% include 'common/portfolio-item.html' %}
+        {% include 'common/portfolio-item.html' %}
+      </div>
+    </div>
+  </div>
+</section>
+
+{% include 'common/ask.html' %}
+
+{% endblock %}
