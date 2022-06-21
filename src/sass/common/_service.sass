@@ -34,3 +34,40 @@
       color: $color-blue
     &:hover .service-item__img img
       transform: scale(1.1)
+
+  &-gallery
+    &__list
+      @include flexbox
+      align-items: flex-start
+      margin: -30px -15px 0
+      a
+        width: calc(100% / 3 - 30px)
+        margin: 30px 15px 0
+        position: relative
+      img
+        width: 100%
+        height: 220px
+        object-fit: cover
+        object-position: center
+
+  &-head
+    padding-bottom: 90px
+    .container
+      @include flexbox
+      align-items: flex-start
+    &__content
+      width: calc(100% - 490px)
+      max-width: 600px
+      .title-md
+        margin-top: 20px
+        margin-bottom: 30px
+      p
+        margin-top: 15px
+      .btn-wrap
+        margin-top: 40px
+    &__img
+      width: 490px
+      margin-left: auto
+      height: 270px
+      object-fit: cover
+      object-position: center
