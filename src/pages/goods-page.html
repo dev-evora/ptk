@@ -1,0 +1,85 @@
+{% extends 'common/_layout.html' %}
+{% set site_title = 'Карточка товара' %}
+
+{% block content %}
+
+{% include 'common/breadcrumbs.html' %}
+
+<section class="goods-card">
+  <div class="container">
+    <div class="goods-main">
+      <h2 class="title-lg">Карниз 01 150х70 мм</h2>
+      <h3>Легкий и долговечный карниз для фасадов зданий</h3>
+      <ul class="goods-spec">
+        <li>
+          <span>Высота</span>
+          <p>150 мм</p>
+        </li>
+        <li>
+          <span>Глубина</span>
+          <p>70 мм</p>
+        </li>
+        <li>
+          <span>Материал</span>
+          <p>пенопласт</p>
+        </li>
+      </ul>
+      <div class="btn-wrap">
+        <a href="#" class="btn-brown">Добавить в смету</a>
+        <a href="#" class="btn-outline">Перейти в смету</a>
+      </div>
+      <div class="goods-message">Не уверены в выбранном количестве и размерах?<br> Добавьте товар в смету и отправьте заказ.<br> Наш специалист перезвонит и проконсультирует по каждому товару в смете.</div>
+    </div>
+    <div class="goods-gallery">
+      <div class="goods-gallery__main">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide"><img src="img/goods.jpg" alt=""></div>
+          <div class="swiper-slide"><img src="img/goods.jpg" alt=""></div>
+          <div class="swiper-slide"><img src="img/goods.jpg" alt=""></div>
+        </div>
+      </div>
+      <div class="goods-gallery__thumbs">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide"><img src="img/goods.jpg" alt=""></div>
+          <div class="swiper-slide"><img src="img/goods.jpg" alt=""></div>
+          <div class="swiper-slide"><img src="img/goods.jpg" alt=""></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="seo">
+  <div class="container">
+    <p>Логотип – ключевой элемент в рекламном оформлении, который должен выглядеть ярко, броско и запоминающейся. Логотип в 3D исполнении – идеальный вариант, который выгодно подчеркнет особенный стиль вашей компании. Если раньше изготовление объемных букв и цифр считалось дорогим удовольствием, то сегодня ситуация кардинально изменилась в лучшую сторону.</p>
+    <p>Современные технологии позволяют создавать эксклюзивные объемные логотипы из пенопласта, которые ничем не уступают предшественникам своими эстетическими свойствами, и отличаются при этом существенно более низкой, доступной ценой.</p>
+    <p>Компания «ПТК Пенопласт» предлагает изготовление объемных букв, цифр и логотипов любых форм и размеров из высокотехнологичного пенополистирола. Изделия можно свободно использовать в помещении и на улице, они не поддаются воздействиям влаги, ветра, предельно низких и высоких температур.</p>
+    <p>Метод контурной и фрезерной резки позволяет вырезать даже самые мельчайшие элементы, реализуя любые дизайнерские задумки. Пенопласт может быть окрашен в любой оттенок, а с помощью специальных покрытий ему можно придать самые разные текстуры.</p>
+  </div>
+</section>
+
+<section class="service">
+  <div class="container">
+    <h2 class="title-lg">Наши услуги</h2>
+    <div class="service-row">
+      {% include 'common/service-item.html' %}
+      {% include 'common/service-item.html' %}
+      {% include 'common/service-item.html' %}
+    </div>
+  </div>
+</section>
+
+<section class="work-section">
+  <div class="container">
+    <h2 class="title-lg">Выполненные проекты</h2>
+    <div class="work-section__row">
+      {% include 'common/work-item.html' %}
+      {% include 'common/work-item.html' %}
+      {% include 'common/work-item.html' %}
+    </div>
+  </div>
+</section>
+
+{% include 'common/easy.html' %}
+
+{% endblock %}

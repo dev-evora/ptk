@@ -147,3 +147,19 @@ $('.section-tabs li').click(function () {
   $('.section-tab').removeClass('active');
   $('.section-tab[data-id=' + id + ']').addClass('active');
 });
+
+const goodsThumbs = new Swiper('.goods-gallery__thumbs', {
+  observer: true,
+  observeParents: true,
+  watchSlidesProgress: true,
+  spaceBetween: 15,
+  slidesPerView: 4,
+  direction: 'vertical',
+});
+
+const goodsMain = new Swiper('.goods-gallery__main', {
+  watchSlidesProgress: true,
+  thumbs: {
+    swiper: goodsThumbs,
+  },
+});
