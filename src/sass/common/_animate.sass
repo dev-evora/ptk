@@ -1,0 +1,48 @@
+.animate
+  @include flexbox
+  align-items: center
+  justify-content: space-between
+
+  &-one
+    max-width: 770px
+    margin-top: 40px
+
+  &__pipe-cut
+    position: relative
+    .animate-2
+      top: -30px
+      left: 0
+      position: absolute
+      transition: top 0.35s
+    .animate-3
+      top: 30px
+      left: 0
+      position: absolute
+      transition: top 0.35s
+
+  &__tube
+    position: relative
+    margin-top: 50px
+    .animate-2
+      top: -50px
+      left: 0
+      position: absolute
+      transition: top 0.4s
+    .animate-3
+      top: 0
+      left: 0
+      position: absolute
+      transition: opacity 0.4s
+      opacity: 0
+
+  &:hover
+    .animate__pipe-cut
+      .animate-2, .animate-3
+        top: 0
+    .animate__tube
+      .animate-2
+        top: 0
+      .animate-3
+        transition-delay: 450ms
+        transition-duration: 300ms
+        opacity: 1
