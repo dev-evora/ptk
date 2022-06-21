@@ -1,0 +1,39 @@
+.goods
+  padding-bottom: 90px
+  &-row
+    @include flexbox
+    align-items: flex-start
+    margin: 0 -15px
+  &-item
+    width: calc(100% / 4 - 30px)
+    margin: 30px 15px 0
+    position: relative
+    &__img
+      padding-bottom: 100%
+      position: relative
+      overflow: hidden
+      img
+        position: absolute
+        top: 0
+        left: 0
+        width: 100%
+        height: 100%
+        object-fit: cover
+        object-position: center
+        transition: .2s
+    &__title
+      display: block
+      margin-top: 15px
+      font-size: 16px
+      &::before
+        content: ''
+        position: absolute
+        top: 0
+        left: 0
+        right: 0
+        bottom: 55px
+    .btn-brown
+      margin-top: 15px
+      font-size: 12px
+    &:hover .goods-item__img img
+      transform: scale(1.1)
