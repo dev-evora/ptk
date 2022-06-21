@@ -1,0 +1,47 @@
+.work
+  padding: 90px 0
+  background: #f2f2f2
+  &-row
+    @include flexbox
+    align-items: flex-start
+  &-main
+    width: 730px
+    height: 380px
+    position: relative
+    overflow: hidden
+    border-radius: 4px
+    &::before
+      content: ''
+      position: absolute
+      top: 20px
+      bottom: 20px
+      right: 20px
+      left: 20px
+      border: 2px solid #fff
+      border-radius: 4px
+      z-index: 10
+    img
+      width: 100%
+      height: 100%
+      object-fit: cover
+      object-position: center
+  &-sidebar
+    width: calc(100% - 730px - 90px)
+    margin-left: auto
+    .title-lg
+      margin-bottom: 20px
+    h3
+      font-size: 22px
+      font-weight: 400
+    p
+      margin-top: 10px
+      max-width: 350px
+    .btn-wrap
+      margin-top: 30px
+  &-second
+    overflow: hidden
+    .control
+      justify-content: flex-start
+      margin-top: 15px
+    .swiper-slide
+      min-height: 165px

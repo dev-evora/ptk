@@ -95,3 +95,28 @@ const productSlider = new Swiper('.product-slider', {
     clickable: true,
   },
 });
+
+const workThumbs = new Swiper('.work-second', {
+  observer: true,
+  observeParents: true,
+  watchSlidesProgress: true,
+  navigation: {
+    nextEl: '.control-next',
+    prevEl: '.control-prev',
+  },
+  pagination: {
+    el: '.control-pagination',
+    clickable: true,
+  },
+});
+
+const workMain = new Swiper('.work-main', {
+  watchSlidesProgress: true,
+  navigation: {
+    nextEl: '.control-next',
+    prevEl: '.control-prev',
+  },
+  thumbs: {
+    swiper: workThumbs,
+  },
+});
