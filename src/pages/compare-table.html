@@ -1,0 +1,125 @@
+{% extends 'common/_layout.html' %}
+{% set site_title = 'Сравнение материалов (таблица)' %}
+
+{% block content %}
+
+{% include 'common/breadcrumbs.html' %}
+
+<section class="compare">
+  <div class="container">
+    <div class="compare-head">
+      <h2 class="title-lg">Сравнение материалов</h2>
+      <h3 class="title-md">Наш архитектор подберет фасадный декор для вашего здания</h3>
+    </div>
+    <form action="#" method="post" class="compare-form">
+      <input type="text" class="input" placeholder="Ваше имя" />
+      <input type="tel" class="input masked" placeholder="Ваш телефон" />
+      <button class="btn-brown">Рассчитать стоимость</button>
+    </form>
+    <div class="compare-table">
+      <div class="compare-row">
+        <div class="compare-col">Характеристики</div>
+        <div class="compare-col">Гипс с гидрофобизатором покрашенный</div>
+        <div class="compare-col">Пенопласт с олимерцементным покрытием</div>
+      </div>
+      <div class="compare-row">
+        <div class="compare-col">Вес деталей</div>
+        <div class="compare-col">Средний</div>
+        <div class="compare-col">Легкий</div>
+      </div>
+      <div class="compare-row">
+        <div class="compare-col">Водонепроницаемость материала</div>
+        <div class="compare-col">Низкая</div>
+        <div class="compare-col">Высокая</div>
+      </div>
+      <div class="compare-row">
+        <div class="compare-col">Морозостойкость</div>
+        <div class="compare-col">Низкая</div>
+        <div class="compare-col">Средняя</div>
+      </div>
+      <div class="compare-row">
+        <div class="compare-col">Цена/Стоимость</div>
+        <div class="compare-col">Низкая</div>
+        <div class="compare-col">Низкая</div>
+      </div>
+      <div class="compare-row">
+        <div class="compare-col">Индивидуальное изготовления</div>
+        <div class="compare-col">Сложный процесс изготовления</div>
+        <div class="compare-col">Простой и быстрый процесс</div>
+      </div>
+      <div class="compare-row">
+        <div class="compare-col">Долговечность</div>
+        <div class="compare-col">до 5 лет в дождливом климате</div>
+        <div class="compare-col">20 лет</div>
+      </div>
+      <div class="compare-row">
+        <div class="compare-col">Уход за декором</div>
+        <div class="compare-col">Регулярное покрытие краской</div>
+        <div class="compare-col">Не пребуется</div>
+      </div>
+      <div class="compare-row">
+        <div class="compare-col">Реакция на плесень</div>
+        <div class="compare-col">Подвержен грибкам</div>
+        <div class="compare-col">Не подвержен плесени</div>
+      </div>
+      <div class="compare-row">
+        <div class="compare-col">Простота в монтаже</div>
+        <div class="compare-col">Средняя сложность мотажа</div>
+        <div class="compare-col">Быстрый и легкий монтаж</div>
+      </div>
+      <div class="compare-row">
+        <div class="compare-col">Виды фасадных элементов</div>
+        <div class="compare-col">
+          <ul>
+            <li>Карнизы</li>
+            <li>Наличники</li>
+            <li>Подоконники</li>
+            <li>Арки</li>
+            <li>Баллюстрады</li>
+            <li>Замковые камни</li>
+            <li>Кронштейны</li>
+            <li>Рустовые камни</li>
+            <li>Филенки и розетки</li>
+            <li>Колонны и пилястры</li>
+            <li>Капители и основания</li>
+          </ul>
+        </div>
+        <div class="compare-col">
+          <ul>
+            <li>Карнизы</li>
+            <li>Наличники</li>
+            <li>Подоконники</li>
+            <li>Арки</li>
+            <li>Баллюстрады</li>
+            <li>Замковые камни</li>
+            <li>Кронштейны</li>
+            <li>Рустовые камни</li>
+            <li>Филенки и розетки</li>
+            <li>Колонны и пилястры</li>
+            <li>Капители и основания</li>
+          </ul>
+        </div>
+      </div>
+      <div class="compare-row">
+        <div class="compare-col">Фото</div>
+        <div class="compare-col">
+          <div class="compare-photo">
+            <a href="img/compare.jpg" data-fancybox><img src="img/compare.jpg" alt=""></a>
+            <a href="img/compare.jpg" data-fancybox><img src="img/compare.jpg" alt=""></a>
+            <a href="img/compare.jpg" data-fancybox><img src="img/compare.jpg" alt=""></a>
+          </div>
+        </div>
+        <div class="compare-col">
+          <div class="compare-photo">
+            <a href="img/compare.jpg" data-fancybox><img src="img/compare.jpg" alt=""></a>
+            <a href="img/compare.jpg" data-fancybox><img src="img/compare.jpg" alt=""></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% include 'common/constructor-promo.html' %}
+
+{% endblock %}
