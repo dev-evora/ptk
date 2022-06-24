@@ -194,5 +194,27 @@ body
   padding-bottom: 90px
   .title-lg
     margin-bottom: 20px
-  p
+  p, ul li
     margin-top: 20px
+  h2, h3
+    margin-top: 40px
+    &:first-child
+      margin-top: 0
+
+.list-arrow,
+.list-line
+  li
+    position: relative
+    padding-left: 25px
+    &::before
+      content: ''
+      position: absolute
+      top: 5px
+      left: 0
+      width: 14px
+      height: 7px
+
+.list-arrow li::before
+  background: url(../img/svg/list-arrow.svg) no-repeat
+.list-line li::before
+  background: url(../img/svg/list-line.svg) no-repeat
