@@ -1,0 +1,41 @@
+.contact
+  padding-bottom: 90px
+  border-bottom: 1px solid $color-main
+  &-item
+    margin-top: 25px
+    h4
+      font-size: 16px
+      font-weight: 400
+      margin-bottom: 10px
+  &-row
+    @include flexbox
+    align-items: flex-start
+    margin: 0 -15px
+  &-col
+    width: calc(100% / 2 - 30px)
+    margin: 0 15px
+  &-soc
+    @include flexbox
+    align-items: center
+    margin-right: 30px
+    img
+      margin-right: 10px
+  .inline
+    @include flexbox
+    align-items: flex-start
+  &-map
+    height: 380px
+    position: relative
+    margin: 45px 0 90px
+    & > ymaps
+      position: absolute
+      top: 0
+      left: 0
+      width: 100% !important
+      height: 100% !important
+
+  &-form
+    margin-top: 25px
+    max-width: 390px
+    .input, .textarea, .checkbox
+      margin-bottom: 20px
