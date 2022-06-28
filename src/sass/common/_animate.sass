@@ -2,10 +2,22 @@
   @include flexbox
   align-items: center
   justify-content: space-between
+  margin-top: 40px
+  position: relative
 
   &-one
     max-width: 770px
-    margin-top: 40px
+    &:hover
+      .animate__pipe-cut
+        .animate-2, .animate-3
+          top: 0
+      .animate__tube
+        .animate-2
+          top: 0
+        .animate-3
+          transition-delay: 450ms
+          transition-duration: 300ms
+          opacity: 1
 
   &__pipe-cut
     position: relative
@@ -35,14 +47,31 @@
       transition: opacity 0.4s
       opacity: 0
 
-  &:hover
-    .animate__pipe-cut
-      .animate-2, .animate-3
-        top: 0
-    .animate__tube
+  &-two
+    max-width: 500px
+    .animate-1,
+    .animate-2
+      position: absolute
+      top: 0
+      opacity: 0
+      transition: opacity 0.4s
+    &:hover
       .animate-2
-        top: 0
-      .animate-3
+        opacity: 1
+      .animate-1
         transition-delay: 450ms
         transition-duration: 300ms
         opacity: 1
+
+  &-three
+    max-width: 500px
+    .animate-1,
+    .animate-2
+      position: absolute
+      top: 0
+      transition: top 0.4s
+    &:hover
+      .animate-1
+        top: 125px
+      .animate-2
+        top: 101px
