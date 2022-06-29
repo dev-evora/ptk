@@ -1,0 +1,140 @@
+{% extends 'common/_layout.html' %}
+{% set site_title = 'Корзина' %}
+
+{% block content %}
+
+{% include 'common/breadcrumbs.html' %}
+
+<section class="order">
+  <div class="container">
+    <h2 class="title-lg">Проверьте смету и оформите заказ</h2>
+    <h3 class="title-sm">В течение 20 мин с вами свяжется менеджер для подтверждения заказа.<br> Если есть вопросы, менеджер проконсультирует вас по товарам.<br> После согласования заявки: сформируем счет на оплату и определим условия доставки.</h3>
+    <div class="order-smeta">
+      <h2 class="title-lg">Смета</h2>
+      <h3 class="title-md">3 товара</h3>
+      <a href="#"><img src="img/svg/pdf.svg" alt="">Скачать PDF</a>
+      <p>Не уверены в выбранном количестве и размерах?<br> Наш специалист перезвонит и проконсультирует по каждому товару в смете.</p>
+    </div>
+    <div class="order-section">
+      <h3 class="title-md">Теплоизоляция труб</h3>
+      {% include 'common/order-item.html' %}
+      {% include 'common/order-item.html' %}
+    </div>
+    <div class="order-section">
+      <h3 class="title-md">Фасадный декор</h3>
+      {% include 'common/order-item.html' %}
+      {% include 'common/order-item.html' %}
+      {% include 'common/order-item.html' %}
+    </div>
+
+    <div class="order-constructor">
+      <h3 class="title-md">Данные из конструктора фасадного декора</h3>
+      <div class="order-row">
+        <div class="order-col">
+          <div class="order-constructor__item">
+            <h4>Тип дома</h4>
+            <ul>
+              <li>Дом со сложным фасадом</li>
+            </ul>
+          </div>
+          <div class="order-constructor__item">
+            <h4>Выбранные типы элементов декора</h4>
+            <ul>
+              <li>Карнизы</li>
+              <li>Подоконники</li>
+              <li>Замковые камни</li>
+            </ul>
+          </div>
+          <div class="order-constructor__item">
+            <h4>Параметры дома</h4>
+            <h5>Стены:</h5>
+            <ul>
+              <li><p>Лицевая стена</p><p>10 х 5.2 м</p></li>
+              <li><p>Стена 1</p><p>10 х 5.2 м</p></li>
+            </ul>
+            <h5>Окна:</h5>
+            <ul>
+              <li><p>Окно 1</p><p>10 х 5.2 м</p><p>1 шт.</p></li>
+              <li><p>Окно 1</p><p>10 х 5.2 м</p><p>1 шт.</p></li>
+              <li><p>Окно 1</p><p>10 х 5.2 м</p><p>1 шт.</p></li>
+              <li><p>Окно 1</p><p>10 х 5.2 м</p><p>1 шт.</p></li>
+              <li><p>Окно 1</p><p>10 х 5.2 м</p><p>1 шт.</p></li>
+              <li><p>Окно 1</p><p>10 х 5.2 м</p><p>1 шт.</p></li>
+              <li><p>Окно 1</p><p>10 х 5.2 м</p><p>1 шт.</p></li>
+            </ul>
+            <h5>Двери:</h5>
+            <ul>
+              <li><p>Дверь 1</p><p>10 х 5.2 м</p><p>1 шт.</p></li>
+              <li><p>Дверь 1</p><p>10 х 5.2 м</p><p>1 шт.</p></li>
+              <li><p>Дверь 1</p><p>10 х 5.2 м</p><p>1 шт.</p></li>
+            </ul>
+            <h5>Внешние углы дома:</h5>
+            <ul>
+              <li><p>Угол 1</p><p>10 х 5.2 м</p><p>1 шт.</p></li>
+              <li><p>Угол 1</p><p>10 х 5.2 м</p><p>1 шт.</p></li>
+              <li><p>Угол 1</p><p>10 х 5.2 м</p><p>1 шт.</p></li>
+              <li><p>Угол 1</p><p>10 х 5.2 м</p><p>1 шт.</p></li>
+              <li><p>Угол 1</p><p>10 х 5.2 м</p><p>1 шт.</p></li>
+              <li><p>Угол 1</p><p>10 х 5.2 м</p><p>1 шт.</p></li>
+            </ul>
+            <h5>Этажность:</h5>
+            <ul>
+              <li>2 этажа</li>
+            </ul>
+          </div>
+        </div>
+        <div class="order-col">
+          <div class="order-constructor__item">
+            <h5>Общий расчет</h5>
+            <ul class="order-constructor__big">
+              <li><p>S общая площадь стен, м²</p><p>4000</p></li>
+              <li><p>S общая площадь окон, м²</p><p>100</p></li>
+              <li><p>S общая площадь дверей, м²</p><p>400</p></li>
+              <li><p>P периметр здания, м</p><p>200</p></li>
+              <li><p>Общее количество окон, шт</p><p>8</p></li>
+              <li><p>Общее количество дверей, шт</p><p>4</p></li>
+              <li><p>Общее количество внешних углов, шт</p><p>4</p></li>
+            </ul>
+          </div>
+          <div class="order-constructor__item">
+            <h5>Приложены файлы</h5>
+            <ul class="order-constructor__files">
+              <li>FileName.jpg<span>(1,25 МБ)</span></li>
+              <li>FileName.jpg<span>(1,25 МБ)</span></li>
+              <li>FileName.jpg<span>(1,25 МБ)</span></li>
+              <li>FileName.jpg<span>(1,25 МБ)</span></li>
+              <li>FileName.jpg<span>(1,25 МБ)</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="order-form">
+  <div class="container">
+    <h2 class="title-lg">Введите контактные данные</h2>
+    <h3 class="title-md">Выбор очевиден. ПТК Пенопласт</h3>
+    <form action="#" method="post">
+      <div class="order-form-col">
+        <input type="text" class="input" placeholder="Ваше имя" />
+        <input type="tel" class="input masked" placeholder="Ваш телефон" />
+        <input type="email" class="input" placeholder="E-mail" />
+      </div>
+      <div class="order-form-col">
+        <textarea class="textarea" placeholder="Напишите ваши комментарии"></textarea>
+        <label class="checkbox">
+          <input type="checkbox" checked />
+          <span>Согласен на обработку персональных данных</span>
+        </label>
+      </div>
+      <div class="order-form-col">
+        <button class="btn-brown">Оформить заказ</button>
+      </div>
+      <img src="img/svg/order-man.svg" alt="" class="order-form__man">
+    </form>
+  </div>
+</section>
+
+{% endblock %}

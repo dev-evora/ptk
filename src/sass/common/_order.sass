@@ -1,0 +1,120 @@
+.order
+  padding-bottom: 90px
+  &-smeta
+    padding-top: 90px
+    @include flexbox
+    align-items: center
+    .title-lg
+      width: 100%
+      margin-bottom: 15px
+    .title-md
+      margin: 0
+    a
+      @include flexbox
+      align-items: center
+      margin-left: 200px
+      text-decoration: underline
+      img
+        margin-right: 10px
+    p
+      margin-top: 30px
+      width: 100%
+  &-section
+    margin-top: 50px
+    counter-reset: item
+  &-item
+    margin-top: 20px
+    border: 1px dashed $color-gray
+    padding: 15px 0
+    @include flexbox
+    align-items: center
+    &::before
+      counter-increment: item
+      content: counter(item)
+      width: 60px
+      text-align: center
+    &__pic
+      width: 70px
+      height: 50px
+      object-fit: cover
+      object-position: center
+    p
+      width: 210px
+      span
+        color: $color-gray
+    &__name
+      flex: 1
+      padding: 0 30px
+    &__delete
+      width: 24px
+      height: 24px
+      border: 0
+      cursor: pointer
+      margin: 0 30px
+      background: #fff url(../img/svg/delete.svg) no-repeat center
+
+  &-row
+    @include flexbox
+    align-items: flex-start
+  &-col
+    width: 400px
+    margin-right: 100px
+    &:last-child
+      margin-right: 0
+  &-constructor
+    padding-top: 90px
+    &__item
+      margin-top: 30px
+      h4
+        font-weight: 400
+        font-size: 16px
+        color: $color-gray
+        margin-bottom: 10px
+      h5
+        font-weight: 400
+        font-size: 14px
+        color: $color-gray
+        margin: 10px 0
+      ul
+        li
+          @include flexbox
+          align-items: flex-start
+          p
+            &:nth-child(1)
+              width: calc(100% - 100px - 70px)
+              padding-right: 10px
+            &:nth-child(2)
+              width: 100px
+            &:nth-child(3)
+              width: 70px
+    &__big
+      li
+        p:nth-child(1)
+          width: calc(100% - 100px) !important
+    &__files
+      li
+        margin-top: 10px
+        span
+          color: $color-gray
+          padding-left: 10px
+          display: block
+
+  &-form
+    padding: 90px 0
+    background: $color-light-gray
+    form
+      @include flexbox
+      align-items: flex-start
+      justify-content: space-between
+      max-width: 800px
+      margin-top: 30px
+      position: relative
+      .input, .textarea
+        margin-bottom: 20px
+    &-col
+      width: calc(100% / 2 - 15px)
+    &__man
+      max-width: initial
+      position: absolute
+      bottom: -90px
+      right: -465px
