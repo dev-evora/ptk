@@ -1,12 +1,12 @@
 /* eslint-disable operator-linebreak */
 /* eslint-disable no-inner-declarations */
 
-// const viewportFix = (width) => {
-//   const meta = $('meta[name="viewport"]');
-//   meta.attr('content', 'user-scalable=no, width=' + (screen.width <= width ? width : 'device-width'));
-// };
+const viewportFix = (width) => {
+  const meta = $('meta[name="viewport"]');
+  meta.attr('content', 'user-scalable=no, width=' + (screen.width <= width ? width : 'device-width'));
+};
 
-// viewportFix(375);
+viewportFix(475);
 
 $('[data-fancybox]').fancybox({
   touch: false,
@@ -66,8 +66,13 @@ if ($('.decor-slider').length) {
       observeParents: true,
       watchSlidesProgress: true,
       spaceBetween: 20,
-      slidesPerView: 7,
+      slidesPerView: 6,
       direction: 'vertical',
+      breakpoints: {
+        1200: {
+          slidesPerView: 7,
+        },
+      },
     });
 
     const main = new Swiper('.decor-slider__main#main-' + i, {
@@ -83,9 +88,9 @@ const productSlider = new Swiper('.product-slider', {
   observer: true,
   observeParents: true,
   watchSlidesProgress: true,
-  spaceBetween: 30,
-  slidesPerView: 3,
-  slidesPerGroup: 3,
+  spaceBetween: 20,
+  slidesPerView: 1,
+  slidesPerGroup: 1,
   navigation: {
     nextEl: '.product-next',
     prevEl: '.product-prev',
@@ -93,6 +98,17 @@ const productSlider = new Swiper('.product-slider', {
   pagination: {
     el: '.product-pagination',
     clickable: true,
+  },
+  breakpoints: {
+    576: {
+      slidesPerView: 2,
+      slidesPerGroup: 2,
+    },
+    1024: {
+      spaceBetween: 30,
+      slidesPerView: 3,
+      slidesPerGroup: 3,
+    },
   },
 });
 
@@ -125,9 +141,9 @@ const uniqSlider = new Swiper('.uniq-slider', {
   observer: true,
   observeParents: true,
   watchSlidesProgress: true,
-  spaceBetween: 30,
-  slidesPerView: 3,
-  slidesPerGroup: 3,
+  spaceBetween: 20,
+  slidesPerView: 1,
+  slidesPerGroup: 1,
   navigation: {
     nextEl: '.uniq-next',
     prevEl: '.uniq-prev',
@@ -135,6 +151,17 @@ const uniqSlider = new Swiper('.uniq-slider', {
   pagination: {
     el: '.uniq-pagination',
     clickable: true,
+  },
+  breakpoints: {
+    576: {
+      slidesPerView: 2,
+      slidesPerGroup: 2,
+    },
+    1024: {
+      spaceBetween: 30,
+      slidesPerView: 3,
+      slidesPerGroup: 3,
+    },
   },
 });
 
