@@ -1,0 +1,341 @@
+{% extends 'common/_layout.html' %}
+{% set site_title = 'Конструктор' %}
+
+{% block content %}
+
+{% include 'common/breadcrumbs.html' %}
+
+<section class="constructor">
+  <div class="container">
+    <h2 class="title-lg">Конструктор фасадного декора</h2>
+    <h3 class="title-sm">Поможет выбрать элементы декора для фасада вашего здания</h3>
+    <div class="constructor-how">
+      <h3 class="title-md">Как это работает?</h3>
+      <ul class="constructor-how__list">
+        <li>Выберите тип дома, похожий на ваш</li>
+        <li>Выберите типы элементов декора</li>
+        <li>Добавьте конкретные элементы</li>
+        <li>Введите данные о своем доме</li>
+        <li>Приложите фото или проект дома, добавьте пожелания</li>
+        <li>В течение 20 мин с вами свяжется менеджер для обсуждения заказа</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="constructor-section">
+  <div class="container">
+    <div class="constructor-head">
+      <h1>1</h1>
+      <p>Выберите тип дома, похожий на ваш,<br> чтобы было проще выбирать декор</p>
+    </div>
+    <div class="constructor-type">
+      <label>
+        <input type="radio" name="house" checked>
+        <img src="img/constructor/house-1.jpg" alt="">
+        <p>Одноэтажный дом</p>
+      </label>
+      <label>
+        <input type="radio" name="house">
+        <img src="img/constructor/house-2.jpg" alt="">
+        <p>Двухэтажный дом</p>
+      </label>
+      <label>
+        <input type="radio" name="house">
+        <img src="img/constructor/house-3.jpg" alt="">
+        <p>Дом со сложным фасадом</p>
+      </label>
+    </div>
+  </div>
+</section>
+
+<section class="constructor-section">
+  <div class="container">
+    <div class="constructor-head">
+      <h1>2</h1>
+      <p>Выберите типы элементов декора, которые вы<br> бы хотели видеть на своем доме</p>
+    </div>
+    <div class="constructor-decor">
+      <div class="constructor-decor__list">
+        <label>
+          <input type="checkbox" name="decor" />
+          <p>Карнизы</p>
+        </label>
+        <label>
+          <input type="checkbox" name="decor" />
+          <p>Подоконники</p>
+        </label>
+        <label>
+          <input type="checkbox" name="decor" />
+          <p>Наличники</p>
+        </label>
+        <label>
+          <input type="checkbox" name="decor" />
+          <p>Арка</p>
+        </label>
+        <label>
+          <input type="checkbox" name="decor" />
+          <p>Замковые камни</p>
+        </label>
+        <label>
+          <input type="checkbox" name="decor" />
+          <p>Рустовые камни</p>
+        </label>
+        <label>
+          <input type="checkbox" name="decor" />
+          <p>Кронштейны</p>
+        </label>
+        <label>
+          <input type="checkbox" name="decor" />
+          <p>Балясины</p>
+        </label>
+        <label>
+          <input type="checkbox" name="decor" />
+          <p>Колонны и пилястры</p>
+        </label>
+        <label>
+          <input type="checkbox" name="decor" />
+          <p>Капитель и основание</p>
+        </label>
+        <label>
+          <input type="checkbox" name="decor" />
+          <p>Барельеф</p>
+        </label>
+        <label>
+          <input type="checkbox" name="decor" />
+          <p>Что-то еще</p>
+        </label>
+      </div>
+      <div class="constructor-decor__house"></div>
+    </div>
+  </div>
+</section>
+
+<section class="constructor-section">
+  <div class="container">
+    <div class="constructor-head">
+      <h1>3</h1>
+      <p>Добавьте конкретные элементы<br> в выбранных типах.</p>
+    </div>
+    <div class="constructor-text">
+      <p>Это нужно, чтобы понять, какие элементы вам нравятся.</p>
+      <p>Можете выбрать несколько</p>
+      <p>Если вам не подходит конкретный элемент, мы сделаем любой формы</p>
+    </div>
+    <div class="constructor-el__type">
+      <label>
+        <input type="radio" name="el-type" data-title="Карнизы" data-text="Помните, что есть несколько типов карнизов: венчающий карниз, межэтажный карниз, цокольный карниз" checked />
+        <p><img src="img/constructor/el-type-1.jpg" alt="">Карнизы</p>
+      </label>
+      <label>
+        <input type="radio" name="el-type" data-title="Подоконники" data-text="Какой-то текст 2" />
+        <p><img src="img/constructor/el-type-2.jpg" alt="">Подоконники</p>
+      </label>
+      <label>
+        <input type="radio" name="el-type" data-title="Наличники" data-text="Какой-то текст 3" />
+        <p><img src="img/constructor/el-type-3.jpg" alt="">Наличники</p>
+      </label>
+      <label>
+        <input type="radio" name="el-type" data-title="Розетки" data-text="Какой-то текст 4" />
+        <p><img src="img/constructor/el-type-4.jpg" alt="">Розетки</p>
+      </label>
+    </div>
+    <div class="constructor-el__row">
+      <div class="constructor-el__content">
+        <div class="constructor-el__title">
+          <h3 class="title-md"></h3>
+          <p></p>
+        </div>
+        {% include 'common/constructor-item.html' %}
+        {% include 'common/constructor-item.html' %}
+        {% include 'common/constructor-item.html' %}
+        {% include 'common/constructor-item.html' %}
+        {% include 'common/constructor-item.html' %}
+        {% include 'common/constructor-item.html' %}
+        <ul class="constructor-el__pagination">
+          <li><a href="#"><</a></li>
+          <li><a href="#">1</a></li>
+          <li class="active"><a href="#">2</a></li>
+          <li><a href="#">3</a></li>
+          <li>...</li>
+          <li><a href="#">5</a></li>
+          <li><a href="#">></a></li>
+        </ul>
+      </div>
+      <div class="constructor-el__list">
+        <h3 class="title-md">Добавлено</h3>
+        <div class="constructor-el__clear">Очистить все</div>
+        <div class="constructor-el__section">
+          <h4>Карниз (2)</h4>
+          {% include 'common/constuctor-list-item.html' %}
+          {% include 'common/constuctor-list-item.html' %}
+        </div>
+        <div class="constructor-el__section">
+          <h4>Карниз (2)</h4>
+          {% include 'common/constuctor-list-item.html' %}
+          {% include 'common/constuctor-list-item.html' %}
+          {% include 'common/constuctor-list-item.html' %}
+          {% include 'common/constuctor-list-item.html' %}
+          {% include 'common/constuctor-list-item.html' %}
+        </div>
+        <div class="constructor-el__section">
+          <h4>Карниз (2)</h4>
+          {% include 'common/constuctor-list-item.html' %}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="constructor-section">
+  <div class="container">
+    <div class="constructor-head">
+      <h1>4</h1>
+      <p>Введите данные о своем доме.<br> Чтобы наш специалист дал вам рекомендации, помог с выбором </p>
+    </div>
+    <div class="constructor-text">
+      <p>Можно пропустить этот этап, если есть проект дома</p>
+    </div>
+    <div class="constructor-calc__row">
+      <div class="constructor-calc__col">
+        <h3 class="title-md">Стены</h3>
+        <div class="constructor-calc__item item-zero" data-type="wall">
+          <h4>Стена</h4>
+          <label>
+            <input type="number" placeholder="0" class="width" />
+            <small>ширина, м</small>
+          </label>
+          <label>
+            <input type="number" placeholder="0" class="height" />
+            <small>высота, м</small>
+          </label>
+          <div class="constructor-calc__amount">
+            <button class="minus">-</button><input type="number" value="1" class="amount" /><button class="plus">+</button>
+          </div>
+          <input type="hidden" class="res" />
+        </div>
+        <div class="item-list" data-type="wall"></div>
+        <button class="constructor-calc__add" data-type="wall">Добавить</button>
+      </div>
+      <div class="constructor-calc__col">
+        <h3 class="title-md">Окна</h3>
+        <div class="constructor-calc__item item-zero" data-type="window">
+          <h4>Окно</h4>
+          <label>
+            <input type="number" placeholder="0" class="width" />
+            <small>ширина, м</small>
+          </label>
+          <label>
+            <input type="number" placeholder="0" class="height" />
+            <small>высота, м</small>
+          </label>
+          <div class="constructor-calc__amount">
+            <button class="minus">-</button><input type="number" value="1" class="amount" /><button class="plus">+</button>
+          </div>
+          <input type="hidden" class="res" />
+        </div>
+        <div class="item-list" data-type="window"></div>
+        <button class="constructor-calc__add" data-type="window">Добавить</button>
+      </div>
+      <div class="constructor-calc__col">
+        <h3 class="title-md">Двери</h3>
+        <div class="constructor-calc__item item-zero" data-type="door">
+          <h4>Дверь</h4>
+          <label>
+            <input type="number" placeholder="0" class="width" />
+            <small>ширина, м</small>
+          </label>
+          <label>
+            <input type="number" placeholder="0" class="height" />
+            <small>высота, м</small>
+          </label>
+          <div class="constructor-calc__amount">
+            <button class="minus">-</button><input type="number" value="1" class="amount" /><button class="plus">+</button>
+          </div>
+          <input type="hidden" class="res" />
+        </div>
+        <div class="item-list" data-type="door"></div>
+        <button class="constructor-calc__add" data-type="door">Добавить</button>
+      </div>
+      <div class="constructor-calc__col">
+        <h3 class="title-md">Внешние углы дома</h3>
+        <div class="constructor-calc__item item-zero" data-type="corner">
+          <h4>Угол</h4>
+          <label>
+            <input type="number" placeholder="0" />
+            <small>высота, м</small>
+          </label>
+          <div class="constructor-calc__amount">
+            <button class="minus">-</button><input type="number" value="1" class="amount" /><button class="plus">+</button>
+          </div>
+        </div>
+        <div class="item-list" data-type="corner"></div>
+        <button class="constructor-calc__add" data-type="corner">Добавить</button>
+      </div>
+      <div class="constructor-calc__col">
+        <h3 class="title-md">Этажность</h3>
+        <div class="constructor-calc__item">
+          <div class="constructor-calc__amount">
+            <button class="minus none">-</button><input type="number" value="1" /><button class="plus">+</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="constructor-calc__result">
+      <h3>Общий расчет</h3>
+      <ul>
+        <li>
+          <p>S общая площадь стен, м²</p>
+          <span id="wall">0</span>
+        </li>
+        <li>
+          <p>S общая площадь окон, м²</p>
+          <span id="window">0</span>
+        </li>
+        <li>
+          <p>S общая площадь дверей, м²</p>
+          <span id="door">0</span>
+        </li>
+        <li>
+          <p>P периметр здания, м</p>
+          <span id="perimeter">0</span>
+        </li>
+        <li>
+          <p>Общее количество окон, шт</p>
+          <span id="windowSum">0</span>
+        </li>
+        <li>
+          <p>Общее количество дверей, шт</p>
+          <span id="doorSum">0</span>
+        </li>
+        <li>
+          <p>Общее количество внешних углов, шт</p>
+          <span id="cornerSum">0</span>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="constructor-section">
+  <div class="container">
+    <div class="constructor-head">
+      <h1>5</h1>
+      <p>Приложите фотографии или проект дома,<br> добавьте пожелания</p>
+    </div>
+    <div class="constructor-file__row">
+      <label class="constructor-file__upload">
+        <input type="file" multiple/>
+        <p>Выберите файлы</p>
+      </label>
+      <div class="constructor-file__list">
+        <h5>Приложены файлы</h5>
+        <ul class="order-constructor__files"></ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% include 'common/order-form.html' %}
+
+{% endblock %}

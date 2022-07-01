@@ -163,3 +163,226 @@ const goodsMain = new Swiper('.goods-gallery__main', {
     swiper: goodsThumbs,
   },
 });
+
+// CONSTRUCTOR
+
+let image = $('.constructor-type input:checked + img').attr('src');
+$('.constructor-decor__house').attr('style', 'background-image: url(' + image + ')');
+
+$('.constructor-type input').change(function () {
+  if ($(this).prop('checked')) {
+    image = $('+ img', this).attr('src');
+  }
+  $('.constructor-decor__house').attr('style', 'background-image: url(' + image + ')');
+});
+
+let title = $('.constructor-el__type input:checked').attr('data-title');
+let text = $('.constructor-el__type input:checked').attr('data-text');
+$('.constructor-el__title .title-md').text(title);
+$('.constructor-el__title p').text(text);
+
+$('.constructor-el__type input').change(function () {
+  if ($(this).prop('checked')) {
+    title = $(this).attr('data-title');
+    text = $(this).attr('data-text');
+  }
+  $('.constructor-el__title .title-md').text(title);
+  $('.constructor-el__title p').text(text);
+});
+
+const calcAmount = () => {
+  $('.constructor-calc__amount').each(function (i, item) {
+    const min = 1;
+    let val = Number($('> input', item).val());
+
+    $('> input', item).change(function () {
+      val = Number($(this).val());
+    });
+
+    $('> .minus', item).click(function () {
+      if (val <= min && !$(this).hasClass('none')) {
+        $(this).parent().parent().remove();
+      }
+      val--;
+      $('> input', item).val(val);
+      calc();
+    });
+
+    $('> .plus', item).click(function () {
+      val++;
+      $('> input', item).val(val);
+      calc();
+    });
+  });
+};
+
+const addCalc = (type) => {
+  $('.item-zero[data-type=' + type + ']')
+    .clone()
+    .appendTo('.item-list[data-type=' + type + ']')
+    .removeClass('item-zero')
+    .addClass('item-single');
+
+  calcAmount();
+};
+
+$('.constructor-calc__add').click(function () {
+  const type = $(this).attr('data-type');
+  addCalc(type);
+  calc();
+});
+
+function calc() {
+  calcWall();
+  calcWindow();
+  calcDoor();
+  calcCorner();
+}
+
+$(document).on('change', '.item-single[data-type="wall"] input', function () {
+  calcWall();
+});
+
+$(document).on('change', '.item-single[data-type="window"] input', function () {
+  calcWindow();
+});
+
+$(document).on('change', '.item-single[data-type="door"] input', function () {
+  calcDoor();
+});
+
+function calcWall() {
+  const resSum = [];
+  const perimeter = [];
+
+  $('.item-single[data-type="wall"]').each(function (i, item) {
+    const width = $('.width', item).val();
+    const height = $('.height', item).val();
+    const amount = $('.amount', item).val();
+
+    const formula = width * height * amount;
+
+    const res = $('.res', item);
+    res.val(formula);
+
+    res.each(function (i, el) {
+      resSum.push(Number($(el).val()));
+    });
+
+    const per = width * amount;
+    perimeter.push(per);
+  });
+
+  const summa = resSum.reduce(function (prev, next) {
+    return prev + next;
+  }, 0);
+  $('#wall').text(summa);
+
+  const per = perimeter.reduce(function (prev, next) {
+    return prev + next;
+  }, 0);
+  $('#perimeter').text(per);
+}
+
+function calcWindow() {
+  const resSum = [];
+  const amountSum = [];
+
+  $('.item-single[data-type="window"]').each(function (i, item) {
+    const width = $('.width', item).val();
+    const height = $('.height', item).val();
+    const amount = $('.amount', item).val();
+
+    const formula = width * height * amount;
+
+    const res = $('.res', item);
+    res.val(formula);
+
+    res.each(function (i, el) {
+      resSum.push(Number($(el).val()));
+    });
+
+    $('.amount', item).each(function (i, el) {
+      amountSum.push(Number($(el).val()));
+    });
+  });
+
+  const summa = resSum.reduce(function (prev, next) {
+    return prev + next;
+  }, 0);
+  $('#window').text(summa);
+
+  const amount = amountSum.reduce(function (prev, next) {
+    return prev + next;
+  }, 0);
+  $('#windowSum').text(amount);
+}
+
+function calcDoor() {
+  const resSum = [];
+  const amountSum = [];
+
+  $('.item-single[data-type="door"]').each(function (i, item) {
+    const width = $('.width', item).val();
+    const height = $('.height', item).val();
+    const amount = $('.amount', item).val();
+
+    const formula = width * height * amount;
+
+    const res = $('.res', item);
+    res.val(formula);
+
+    res.each(function (i, el) {
+      resSum.push(Number($(el).val()));
+    });
+
+    $('.amount', item).each(function (i, el) {
+      amountSum.push(Number($(el).val()));
+    });
+  });
+
+  const summa = resSum.reduce(function (prev, next) {
+    return prev + next;
+  }, 0);
+  $('#door').text(summa);
+
+  const amount = amountSum.reduce(function (prev, next) {
+    return prev + next;
+  }, 0);
+  $('#doorSum').text(amount);
+}
+
+function calcCorner() {
+  const amountSum = [];
+
+  $('.item-single[data-type="corner"]').each(function (i, item) {
+    const amount = $('.amount', item).val();
+    $('.amount', item).each(function (i, el) {
+      amountSum.push(Number($(el).val()));
+    });
+  });
+
+  const amount = amountSum.reduce(function (prev, next) {
+    return prev + next;
+  }, 0);
+  $('#cornerSum').text(amount);
+}
+
+$('.constructor-file__upload input').change(function () {
+  const names = [];
+  const sizes = [];
+
+  for (let i = 0; i < $(this).get(0).files.length; ++i) {
+    names.push($(this).get(0).files[i].name);
+    const size = $(this).get(0).files[i].size / 1000000;
+    sizes.push(size.toFixed(2));
+  }
+
+  $('.order-constructor__files').empty();
+
+  names.forEach((value, index) => {
+    $('.order-constructor__files').append(
+      '<li>' + names.slice(index, index + 1) + '<span>(' + sizes[index] + ' МБ)</span></li>'
+    );
+  });
+});
