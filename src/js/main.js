@@ -192,10 +192,14 @@ const goodsMain = new Swiper('.goods-gallery__main', {
 });
 
 if ($('body').width() >= 768) {
-  $('.js-dropdown').hover(function () {
-    const dropdown = $(this).attr('data-dropdown');
-    $('.header-dropdown[data-dropdown=' + dropdown + ']').slideDown(200);
-  });
+  $('.js-dropdown').hover(
+    function () {
+      const dropdown = $(this).attr('data-dropdown');
+      $('.header-dropdown').hide();
+      $('.header-dropdown[data-dropdown=' + dropdown + ']').slideDown(200);
+    },
+    function () {}
+  );
 
   $('.header-dropdown').mouseleave(function () {
     $('.header-dropdown').slideUp(200);
