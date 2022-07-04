@@ -198,7 +198,7 @@ if ($('body').width() >= 768) {
   });
 
   $('.header-dropdown').mouseleave(function () {
-    $(this).slideUp(200);
+    $('.header-dropdown').slideUp(200);
   });
 
   $('.header-dropdown__menu li').hover(function () {
