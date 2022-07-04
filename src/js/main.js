@@ -475,3 +475,31 @@ const animPromo = () => {
 };
 
 if ($('body').width() >= 768) animPromo();
+
+const sertSlider = new Swiper('.sert-slider', {
+  observer: true,
+  observeParents: true,
+  watchSlidesProgress: true,
+  spaceBetween: 20,
+  slidesPerView: 3,
+  slidesPerGroup: 3,
+  navigation: {
+    nextEl: '.sert-next',
+    prevEl: '.sert-prev',
+  },
+  pagination: {
+    el: '.sert-pagination',
+    clickable: true,
+  },
+  breakpoints: {
+    // 576: {
+    //   slidesPerView: 2,
+    //   slidesPerGroup: 2,
+    // },
+    1024: {
+      spaceBetween: 30,
+      slidesPerView: 5,
+      slidesPerGroup: 5,
+    },
+  },
+});
