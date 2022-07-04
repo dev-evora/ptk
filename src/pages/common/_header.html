@@ -8,9 +8,9 @@
       </div>
       <div class="header-contact">
         <ul class="header-contact__social">
-          <li><a href="#"><img src="img/svg/tg.svg" alt=""></a></li>
-          <li><a href="#"><img src="img/svg/wa.svg" alt=""></a></li>
-          <li><a href="#"><img src="img/svg/vk.svg" alt=""></a></li>
+          <li><a href="#" target="_blank"><img src="img/svg/tg.svg" alt=""></a></li>
+          <li><a href="#" target="_blank"><img src="img/svg/wa.svg" alt=""></a></li>
+          <li><a href="#" target="_blank"><img src="img/svg/vk.svg" alt=""></a></li>
         </ul>
         <div class="header-contact__email">
           <a href="mailto:info@ptkp.ru">info@ptkp.ru</a>
@@ -29,16 +29,70 @@
   </div>
   <div class="header-bottom">
     <div class="container">
-      <div class="header-burger">Меню</div>
+      <div class="header-burger js-dropdown" data-dropdown="menu">Меню</div>
       <ul class="header-nav">
-        <li><a href="#">Продукция</a></li>
+        <li class="js-dropdown" data-dropdown="product"><a href="#">Продукция</a></li>
         <li><a href="#">Услуги</a></li>
         <li><a href="#">Контакты</a></li>
       </ul>
       <a href="#" class="header-constructor">Конструктор фасадного декора</a>
       <div class="header-icons">
+        <form action="#" class="header-search">
+          <input type="text" placeholder="Поиск...">
+          <button type="submit"></button>
+        </form>
         <div class="header-icons__search"></div>
         <a href="#" class="header-icons__cart"><span>2</span></a>
+      </div>
+    </div>
+  </div>
+  <div class="header-dropdown" data-dropdown="menu">
+    <div class="container">
+      <ul class="header-dropdown__menu">
+        <li><a href="#">О компании</a></li>
+        <li><a href="#">Портфолио</a></li>
+        <li><a href="#">Сравнение материалов</a></li>
+        <li><a href="#">Производство</a></li>
+        <li class="header-dropdown__mob"><a href="#">Продукция</a></li>
+        <li class="header-dropdown__mob"><a href="#">Услуги</a></li>
+        <li class="header-dropdown__mob"><a href="#">Контакты</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="header-dropdown" data-dropdown="product">
+    <div class="container">
+      <div class="header-dropdown__row">
+        <ul class="header-dropdown__menu">
+          <li class="js-submenu" data-submenu="1"><a href="#">Фасадный декор</a></li>
+          <li><a href="#">Упаковка</a></li>
+          <li><a href="#">Декорации и рекламная продукция</a></li>
+          <li><a href="#">“Мастер Пол”</a></li>
+          <li><a href="#">Несъёмная опалубка</a></li>
+          <li><a href="#">Сиденья и лежаки для хамам</a></li>
+          <li class="js-submenu" data-submenu="2"><a href="#">Теплоизоляция труб</a></li>
+        </ul>
+        <div class="header-dropdown__submenu" data-submenu="1">
+          <ul>
+            <li><a href="#">Карнизы</a></li>
+            <li><a href="#">Кронштейны</a></li>
+            <li><a href="#">Наличники</a></li>
+            <li><a href="#">Рустовые камни</a></li>
+            <li><a href="#">Подоконники</a></li>
+            <li><a href="#">Филенки и розетки</a></li>
+            <li><a href="#">Арки</a></li>
+            <li><a href="#">Колонны и пилястры</a></li>
+            <li><a href="#">Баллюстрады</a></li>
+            <li><a href="#">Капители и основания</a></li>
+            <li><a href="#">Замковые камни</a></li>
+          </ul>
+        </div>
+        <div class="header-dropdown__submenu" data-submenu="2">
+          <ul>
+            <li><a href="#">Какой-то раздел 1</a></li>
+            <li><a href="#">Какой-то раздел 2</a></li>
+            <li><a href="#">Какой-то раздел 3</a></li>
+          </ul>
+        </div>
       </div>
     </div>
   </div>

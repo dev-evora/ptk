@@ -1,4 +1,7 @@
 .header
+  position: relative
+  .container
+    position: initial
   &-top
     padding: 25px 0
     .container
@@ -56,6 +59,8 @@
         display: block
   &-bottom
     background: $color-blue
+    position: relative
+    z-index: 200
     color: #fff
     min-height: 46px
     @include flexbox
@@ -67,27 +72,75 @@
   &-burger
     cursor: pointer
     display: block
-    height: 24px
+    height: 46px
     padding-left: 40px
-    background: url(../img/svg/burger.svg) no-repeat
-    line-height: 24px
+    background: url(../img/svg/burger.svg) no-repeat left center
+    line-height: 46px
+    position: relative
+    &::before
+      content: ''
+      position: absolute
+      top: 0
+      left: -20px
+      right: -20px
+      bottom: 0
+      background: $color-brown
+      z-index: -1
+      opacity: 0
+      transition: .2s
+    &:hover::before
+      opacity: 1
   &-nav
     @include flexbox
     align-items: center
     li
       margin-right: 70px
+      position: relative
+      height: 46px
+      a
+        display: block
+        height: 100%
+        line-height: 46px
       &:last-child
         margin-right: 0
+      &::before
+        content: ''
+        position: absolute
+        top: 0
+        left: -20px
+        right: -20px
+        bottom: 0
+        background: $color-brown
+        z-index: -1
+        opacity: 0
+        transition: .2s
+      &:hover::before
+        opacity: 1
   &-constructor
     cursor: pointer
     display: block
-    height: 24px
+    height: 46px
     padding-left: 40px
-    background: url(../img/svg/constructor.svg) no-repeat
-    line-height: 24px
+    background: url(../img/svg/constructor.svg) no-repeat left center
+    line-height: 46px
+    position: relative
+    &::before
+      content: ''
+      position: absolute
+      top: 0
+      left: -20px
+      right: -20px
+      bottom: 0
+      background: $color-brown
+      z-index: -1
+      opacity: 0
+      transition: .2s
+    &:hover::before
+      opacity: 1
   &-icons
     @include flexbox
     align-items: center
+    position: relative
     &__search
       width: 24px
       height: 24px
@@ -113,3 +166,77 @@
         font-size: 10px
         text-align: center
         line-height: 16px
+  &-search
+    position: absolute
+    z-index: 10
+    top: -11px
+    bottom: -11px
+    padding: 6px
+    background: $color-blue
+    width: 470px
+    right: calc(100% - 36px)
+    display: none
+    input
+      width: 100%
+      background: #fff
+      height: 100%
+      border-radius: 2px
+      border: 0
+      padding-left: 20px
+    button
+      position: absolute
+      top: 6px
+      right: 6px
+      bottom: 6px
+      width: 36px
+      border: 0
+      background: transparent url(../img/svg/search-btn.svg) no-repeat center
+      cursor: pointer
+
+  &-dropdown
+    background: #fff
+    padding: 40px 0
+    position: absolute
+    left: 0
+    right: 0
+    z-index: 100
+    box-shadow: 0 0 20px 10px rgba(0,0,0,.15)
+    display: none
+    &__menu
+      max-width: 290px
+      font-size: 16px
+      li
+        margin-top: 40px
+        &:first-child
+          margin-top: 0
+        a
+          transition: .2s
+          &:hover
+            color: $color-brown
+    &__mob
+      display: none
+    &__row
+      @include flexbox
+    &__submenu
+      width: calc(100% - 290px - 60px)
+      max-width: 600px
+      border-left: 1px solid $color-gray
+      padding-left: 60px
+      margin-left: 60px
+      display: none
+      ul
+        @include flexbox
+        align-items: flex-start
+        justify-content: space-between
+        font-size: 16px
+        li
+          margin-top: 40px
+          margin-bottom: 0
+          width: calc(100% / 2 - 20px)
+          &:first-child, &:nth-child(2)
+            margin-top: 0
+          a
+            transition: .2s
+            color: $color-gray
+            &:hover
+              color: $color-brown
