@@ -445,3 +445,30 @@ $('.constructor-file__upload input').change(function () {
 $('.header-icons__search').click(function () {
   $('.header-search').fadeIn(200);
 });
+
+const animPromo = () => {
+  const elem = $('.promo');
+  const pos = elem.offset();
+  const elemLeft = pos.left;
+  const elemTop = pos.top;
+  const elemWidth = elem.width();
+  const elemHeight = elem.height();
+
+  let xCenter;
+  let yCenter;
+
+  $('body').mousemove(function (e) {
+    xCenter = elemWidth / 2 - (e.pageX - elemLeft);
+    yCenter = elemHeight / 2 - (e.pageY - elemTop);
+
+    const speed = -2;
+    const xPos = Math.round(((-1 * xCenter) / 20) * speed);
+    let yPos = Math.round((yCenter / 20) * speed);
+
+    if (yPos < 0) yPos = -2 * speed;
+
+    $('.promo-img').css('transform', 'translate3d(' + xPos + 'px, ' + yPos + 'px, 0px)');
+  });
+};
+
+animPromo();
