@@ -442,6 +442,8 @@ $('.constructor-file__upload input').change(function () {
   });
 });
 
+// END CONSTRUCTOR
+
 $('.header-icons__search').click(function () {
   $('.header-search').fadeIn(200);
 });
@@ -472,4 +474,4 @@ const animPromo = () => {
   });
 };
 
-animPromo();
+if ($('body').width() >= 768) animPromo();
