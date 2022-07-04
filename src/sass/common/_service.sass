@@ -98,3 +98,74 @@
 
   &-helper
     width: 410px
+
+  &-help
+    &__tabs
+      @include flexbox
+      align-items: flex-start
+      margin-right: -10px
+      margin-top: 20px
+      margin-bottom: 10px
+      li
+        cursor: pointer
+        padding: 7px 15px
+        border-radius: 30px
+        border: 1px solid $color-main
+        margin-right: 10px
+        margin-bottom: 10px
+        transition: .2s
+        font-size: 12px
+        &.active
+          background: $color-brown
+          color: #fff
+          border: 1px solid $color-brown
+    &__row
+      @include flexbox
+      align-items: flex-start
+    &__img
+      width: 46px
+      height: 46px
+      border-radius: 100%
+      object-fit: cover
+      object-position: center
+    &__content
+      width: calc(100% - 46px - 20px)
+      margin-left: auto
+      position: relative
+    &__tab
+      display: none
+      &.active
+        display: block
+    &__message
+      padding: 10px
+      border: 1px dashed $color-gray
+      border-radius: 2px
+      margin-bottom: 20px
+      background: #fff
+      position: relative
+      z-index: 5
+
+.loader
+  width: 14px
+  height: 14px
+  border-radius: 50%
+  display: block
+  margin-top: 14px
+  margin-left: 17px
+  position: absolute
+  color: $color-gray
+  box-sizing: border-box
+  animation: animloader 1s linear infinite
+  transform: scale(0.5)
+
+@keyframes animloader
+  0%
+    box-shadow: 14px 0 0 -2px, 38px 0 0 -2px, -14px 0 0 -2px, -38px 0 0 -2px
+  25%
+    box-shadow: 14px 0 0 -2px, 38px 0 0 -2px, -14px 0 0 -2px, -38px 0 0 2px
+  50%
+    box-shadow: 14px 0 0 -2px, 38px 0 0 -2px, -14px 0 0 2px, -38px 0 0 -2px
+  75%
+    box-shadow: 14px 0 0 2px, 38px 0 0 -2px, -14px 0 0 -2px, -38px 0 0 -2px
+  100%
+    box-shadow: 14px 0 0 -2px, 38px 0 0 2px, -14px 0 0 -2px, -38px 0 0 -2px
