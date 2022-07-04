@@ -462,10 +462,11 @@ const animPromo = () => {
     yCenter = elemHeight / 2 - (e.pageY - elemTop);
 
     const speed = -2;
-    const xPos = Math.round(((-1 * xCenter) / 20) * speed);
+    let xPos = Math.round(((-1 * xCenter) / 20) * speed);
     let yPos = Math.round((yCenter / 20) * speed);
 
-    if (yPos < 0) yPos = -2 * speed;
+    if (xPos > 150) xPos = 150;
+    if (yPos > 150) yPos = 150;
 
     $('.promo-img').css('transform', 'translate3d(' + xPos + 'px, ' + yPos + 'px, 0px)');
   });
