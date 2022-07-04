@@ -68,23 +68,37 @@ body
     padding: 8px 15px
     border: 1px solid $color-blue
     color: $color-blue
+    transition: .2s
+    &:hover
+      background: $color-blue
+      color: #fff
   &-link
     font-size: 12px
     border-bottom: 1px solid $color-blue
+    transition: .2s
+    &:hover
+      border-bottom: 1px solid transparent
   &-brown
     padding: 13px 35px
     color: #fff
     background: $color-brown
+    border: 1px solid $color-brown
     border-radius: 4px
-    border: 0
     cursor: pointer
     font-size: 16px
+    transition: .2s
+    &:hover
+      background: #f27a4c
   &-outline
     padding: 8px 15px
     border-radius: 4px
     border: 1px solid $color-blue
     display: block
     text-align: center
+    transition: .2s
+    &:hover
+      background: $color-blue
+      color: #fff
   &-white
     padding: 13px 35px
     color: #fff
@@ -92,6 +106,10 @@ body
     border: 1px solid #fff
     cursor: pointer
     font-size: 16px
+    transition: .2s
+    &:hover
+      background: #fff
+      color: $color-blue
 
 .input
   height: 50px
