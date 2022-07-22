@@ -207,11 +207,8 @@ if ($('body').width() >= 768) {
 
   $('.header-dropdown__menu li').hover(function () {
     const dropdown = $(this).attr('data-submenu');
-    if ($(this).hasClass('js-submenu')) {
-      $('.header-dropdown__submenu[data-submenu=' + dropdown + ']').fadeIn(200);
-    } else {
-      $('.header-dropdown__submenu').fadeOut(200);
-    }
+    $('.header-dropdown__submenu').hide();
+    $('.header-dropdown__submenu[data-submenu=' + dropdown + ']').show();
   });
 
   $('.header-dropdown__submenu').mouseleave(function () {
