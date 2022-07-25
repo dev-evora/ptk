@@ -34,6 +34,11 @@
           bottom: 0
           margin: auto 0
           right: 15px
+          transition: .2s
+        &:hover
+          text-decoration: underline
+          &::before
+            right: 10px
   &-gallery
     @include flexbox
     align-items: flex-start
