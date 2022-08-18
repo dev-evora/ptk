@@ -21,6 +21,9 @@
         object-fit: cover
         object-position: center
         transition: .2s
+        &:nth-child(2)
+          z-index: 8
+          opacity: 0
     &__title
       display: block
       margin-top: 15px
@@ -32,11 +35,12 @@
         left: 0
         right: 0
         bottom: 55px
+        z-index: 10
     .btn-brown
       margin-top: 15px
       font-size: 12px
-    &:hover .goods-item__img img
-      transform: scale(1.1)
+    &:hover .goods-item__img img:nth-child(2)
+      opacity: 1
   &-card
     padding-bottom: 40px
     .container
